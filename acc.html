@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Computer engineering</title>
+	<style>
+        body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+    background-color: #222;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 50px;
+    color: rgb(255, 255, 255);
+}
+
+#generator {
+	text-align: center;
+	margin-top: 50px;
+    color: rgb(255, 255, 255);
+}
+#generator a{
+    background-color: #ffffff;
+	color: rgb(0, 0, 0);
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	margin-top: 20px;
+    text-decoration: none;
+}
+button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	margin-top: 20px;
+}
+
+button:hover {
+	background-color: #3e8e41;
+}
+
+#title {
+	font-size: 24px;
+	margin-top: 20px;
+}
+    </style>
+</head>
+<body>
+	<h1>Capstone Title Generator</h1>
+	<div id="generator">
+		<h2>Generate Your Title:</h2>
+		<button id="generate-btn">Generate</button>
+		<p id="title"></p>
+        <a href="index.html">Home</a>
+	</div>
+
+	<script>const topics = [
+		"The Impact of Taxation Policies on Small Businesses",
+		"Audit Quality and Financial Reporting",
+		"Sustainability Reporting and Corporate Social Responsibility",
+		"Financial Analysis of Mergers and Acquisitions",
+		"The Role of Corporate Governance in Preventing Financial Fraud",
+		"The Impact of Technology on Accounting Practices",
+		"International Financial Reporting Standards (IFRS) Implementation",
+		"Forensic Accounting and Fraud Detection Techniques",
+		"The Effectiveness of Internal Control Systems in Reducing Risk",
+		"Financial Reporting and Disclosure Requirements",
+		"The Role of Accounting in Strategic Decision Making",
+		"The Impact of Corporate Social Responsibility on Financial Performance",
+		"The Role of Accounting Information Systems in Decision Making",
+		"Auditing and Assurance Services",
+		"The Ethics of Accounting",
+		"The Impact of Financial Regulation on Accounting Practices",
+		"Cost Accounting and Management Accounting",
+		"The Importance of Cash Flow Management in Small Businesses",
+		"The Role of Accountants in the Digital Age",
+		"The Effectiveness of Budgeting and Forecasting Techniques",
+		"The Role of Accounting in Sustainability Reporting",
+		"The Impact of Taxation on Multinational Corporations",
+		"The Relationship Between Accounting and Financial Markets",
+		"The Role of Financial Analysis in Business Valuation"
+	  ];
+	  
+	  function generateTitle() {
+		const randomTopic = topics[Math.floor(Math.random() * topics.length)];
+		const title = `An Investigation into ${randomTopic}`;
+		document.getElementById("title").innerText = title;
+	  }
+	  
+	  document.getElementById("generate-btn").addEventListener("click", generateTitle);
+	  </script>
+</body>
+</html>

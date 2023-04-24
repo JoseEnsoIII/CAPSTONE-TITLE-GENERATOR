@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Computer engineering</title>
+	<style>
+        body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+    background-color: #222;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 50px;
+    color: rgb(255, 255, 255);
+}
+
+#generator {
+	text-align: center;
+	margin-top: 50px;
+    color: rgb(255, 255, 255);
+}
+#generator a{
+    background-color: #ffffff;
+	color: rgb(0, 0, 0);
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	margin-top: 20px;
+    text-decoration: none;
+}
+button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	margin-top: 20px;
+}
+
+button:hover {
+	background-color: #3e8e41;
+}
+
+#title {
+	font-size: 24px;
+	margin-top: 20px;
+}
+    </style>
+</head>
+<body>
+	<h1>Capstone Title Generator</h1>
+	<div id="generator">
+		<h2>Generate Your Title:</h2>
+		<button id="generate-btn">Generate</button>
+		<p id="title"></p>
+        <a href="index.html">Home</a>
+	</div>
+
+	<script>const topics = [
+		"Exploring the World of Sourdough Bread",
+		"Fusion Cuisine: Blending Culinary Traditions",
+		"Artisanal Cheese Making Techniques",
+		"The Science of Molecular Gastronomy",
+		"Culinary Creativity with Plant-Based Ingredients",
+		"Mastering the Art of French Pastry",
+		"Regional Cuisines of Italy: From Tuscany to Sicily",
+		"Farm-to-Table Cooking: Maximizing Flavor with Fresh Ingredients",
+		"The Art of Charcuterie: Curing Meats and Making Sausages",
+		"Seafood 101: Buying, Preparing, and Cooking Fresh Fish",
+		"The Art of Japanese Cuisine: Sushi, Ramen, and More",
+		"Farmers' Market Fresh: Creating Delicious Meals with Seasonal Produce",
+		"Classic American Desserts: Pies, Cakes, and Cookies",
+		"Mastering the Grill: From Burgers to Brisket",
+		"Baking with Chocolate: Techniques and Recipes for Decadent Desserts",
+		"Healthy Eating, Delicious Results: Cooking with Whole Foods",
+		"The Art of Spanish Cuisine: Paella, Tapas, and More",
+		"From Scratch: Making Pasta, Gnocchi, and Other Italian Specialties",
+		"The Flavors of Southeast Asia: Thai, Vietnamese, and More",
+		"The Art of BBQ: Smoking Meats and More",
+		"Wine and Food Pairing: Enhancing the Dining Experience",
+		"Creating Artful Desserts: Cake Decorating Techniques and Tips",
+		"The Art of Indian Cuisine: Spices, Curries, and More",
+		"The Art of Southern Cooking: From Fried Chicken to Biscuits and Gravy",
+		"The Perfect Brunch: From Eggs Benedict to Bloody Marys"
+	  ];
+	  
+	  function generateTitle() {
+		const randomTopic = topics[Math.floor(Math.random() * topics.length)];
+		const title = `The Art of ${randomTopic}`;
+		document.getElementById("title").innerText = title;
+	  }
+	  
+	  document.getElementById("generate-btn").addEventListener("click", generateTitle);
+	  </script>
+</body>
+</html>

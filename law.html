@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Computer engineering</title>
+	<style>
+        body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+    background-color: #222;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 50px;
+    color: rgb(255, 255, 255);
+}
+
+#generator {
+	text-align: center;
+	margin-top: 50px;
+    color: rgb(255, 255, 255);
+}
+#generator a{
+    background-color: #ffffff;
+	color: rgb(0, 0, 0);
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	margin-top: 20px;
+    text-decoration: none;
+}
+button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	margin-top: 20px;
+}
+
+button:hover {
+	background-color: #3e8e41;
+}
+
+#title {
+	font-size: 24px;
+	margin-top: 20px;
+}
+    </style>
+</head>
+<body>
+	<h1>Capstone Title Generator</h1>
+	<div id="generator">
+		<h2>Generate Your Title:</h2>
+		<button id="generate-btn">Generate</button>
+		<p id="title"></p>
+        <a href="index.html">Home</a>
+	</div>
+
+	<script>const topics = [
+		"The Impact of Cybersecurity on International Law",
+		"The Role of Alternative Dispute Resolution in Modern Law",
+		"Human Rights in Times of Crisis",
+		"The Intersection of Law and Technology",
+		"The Future of Intellectual Property Law",
+		"The Impact of Brexit on International Trade Law",
+		"Criminal Justice Reform: A Comparative Analysis",
+		"Environmental Law and Sustainability",
+		"The Legal Implications of Artificial Intelligence",
+		"Privacy and Data Protection Laws in the Digital Age",
+		"Corporate Social Responsibility and the Law",
+		"The Role of International Organizations in Modern Diplomacy",
+		"The Right to Free Speech in the Age of Social Media",
+		"Legal Challenges in the Age of Climate Change",
+		"The Evolution of Human Rights Law",
+		"The Intersection of Law and Ethics",
+		"The Legal Implications of Blockchain Technology",
+		"Access to Justice and Legal Aid: A Global Perspective",
+		"The Role of Law in Combating Human Trafficking",
+		"The Right to Privacy and National Security Concerns",
+		"The Future of the Legal Profession in the Digital Age",
+		"International Humanitarian Law and the Protection of Civilians",
+		"The Legal Implications of Biotechnology",
+		"The Role of the Judiciary in a Democratic Society"
+	  ];
+	  
+	  function generateTitle() {
+		const randomTopic = topics[Math.floor(Math.random() * topics.length)];
+		const title = `An Analysis of ${randomTopic}`;
+		document.getElementById("title").innerText = title;
+	  }
+	  
+	  document.getElementById("generate-btn").addEventListener("click", generateTitle);
+	  </script>
+</body>
+</html>

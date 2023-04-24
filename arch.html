@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Computer engineering</title>
+	<style>
+        body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+    background-color: #222;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 50px;
+    color: rgb(255, 255, 255);
+}
+
+#generator {
+	text-align: center;
+	margin-top: 50px;
+    color: rgb(255, 255, 255);
+}
+#generator a{
+    background-color: #ffffff;
+	color: rgb(0, 0, 0);
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	margin-top: 20px;
+    text-decoration: none;
+}
+button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	margin-top: 20px;
+}
+
+button:hover {
+	background-color: #3e8e41;
+}
+
+#title {
+	font-size: 24px;
+	margin-top: 20px;
+}
+    </style>
+</head>
+<body>
+	<h1>Capstone Title Generator</h1>
+	<div id="generator">
+		<h2>Generate Your Title:</h2>
+		<button id="generate-btn">Generate</button>
+		<p id="title"></p>
+        <a href="index.html">Home</a>
+	</div>
+
+	<script>const topics = [
+		"The Influence of Culture on Architectural Design",
+		"Innovative Design Strategies for Sustainable Architecture",
+		"Designing High-Rise Buildings with Efficient Structural Systems",
+		"Revitalization of Historical Buildings through Adaptive Reuse",
+		"Architecture for Disaster Relief: Designing for Post-Disaster Reconstruction",
+		"Designing Urban Public Spaces for Community Interaction",
+		"Innovative Green Building Materials and Technologies",
+		"Designing Hospitals for Optimal Patient Care and Healing",
+		"Sustainable Design Strategies for Residential Buildings",
+		"Designing Learning Spaces for the 21st Century",
+		"Reimagining the Skyscraper: New Approaches to Vertical Architecture",
+		"Innovative Materials and Technologies for Facade Design",
+		"Designing Urban Landscapes for Biodiversity",
+		"Revolutionizing Transit Architecture: Future of Transportation Hubs",
+		"Exploring the Relationship between Light and Space in Architecture",
+		"Designing Smart Homes for the Future",
+		"Transforming Abandoned Industrial Sites through Adaptive Reuse",
+		"Biophilic Design: Enhancing Human-Nature Connection in Built Environments",
+		"Innovative Approaches to Sustainable Housing for the Homeless",
+		"Sustainability and Cost-Effectiveness in Green Building Design",
+	  ];
+	  
+	  function generateTitle() {
+		const randomTopic = topics[Math.floor(Math.random() * topics.length)];
+		const title = `Exploring the Intersection of ${randomTopic} and Architecture`;
+		document.getElementById("title").innerText = title;
+	  }
+	  
+	  document.getElementById("generate-btn").addEventListener("click", generateTitle);
+	  </script>
+</body>
+</html>

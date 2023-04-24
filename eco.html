@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Computer engineering</title>
+	<style>
+        body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+    background-color: #222;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 50px;
+    color: rgb(255, 255, 255);
+}
+
+#generator {
+	text-align: center;
+	margin-top: 50px;
+    color: rgb(255, 255, 255);
+}
+#generator a{
+    background-color: #ffffff;
+	color: rgb(0, 0, 0);
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	margin-top: 20px;
+    text-decoration: none;
+}
+button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	margin-top: 20px;
+}
+
+button:hover {
+	background-color: #3e8e41;
+}
+
+#title {
+	font-size: 24px;
+	margin-top: 20px;
+}
+    </style>
+</head>
+<body>
+	<h1>Capstone Title Generator</h1>
+	<div id="generator">
+		<h2>Generate Your Title:</h2>
+		<button id="generate-btn">Generate</button>
+		<p id="title"></p>
+        <a href="index.html">Home</a>
+	</div>
+
+	<script>	const topics = [
+		"An Analysis of the Impact of Fiscal Policy on Economic Growth",
+		"The Effect of International Trade on Economic Development",
+		"The Impact of Labor Unions on Economic Growth",
+		"An Analysis of the Relationship between Education and Economic Development",
+		"The Effect of Exchange Rates on International Trade",
+		"The Role of Central Banks in Economic Stability",
+		"The Impact of Inflation on Economic Growth",
+		"The Relationship between Income Inequality and Economic Growth",
+		"The Effect of Monetary Policy on Economic Growth",
+		"The Impact of Corporate Social Responsibility on Economic Performance",
+		"The Effect of Taxation on Economic Growth",
+		"The Role of Financial Markets in Economic Development",
+		"The Impact of Foreign Direct Investment on Economic Growth",
+		"The Relationship between Oil Prices and Economic Growth",
+		"The Effect of Government Regulation on Economic Development",
+		"The Role of Entrepreneurship in Economic Development",
+		"The Impact of Population Growth on Economic Development",
+		"The Relationship between Healthcare and Economic Growth",
+		"The Effect of Infrastructure on Economic Development",
+		"The Role of Microfinance in Economic Development",
+		"The Impact of Technology on Economic Growth",
+		"The Relationship between Poverty and Economic Growth",
+		"The Effect of Corruption on Economic Development",
+		"The Role of Economic Policies in Economic Stability"
+		];
+
+		function generateTitle() {
+			const randomTopic = topics[Math.floor(Math.random() * topics.length)];
+			const title = `An Analysis of ${randomTopic}`;
+			document.getElementById("title").innerText = title;
+		}
+
+		document.getElementById("generate-btn").addEventListener("click", generateTitle);s</script>
+</body>
+</html>

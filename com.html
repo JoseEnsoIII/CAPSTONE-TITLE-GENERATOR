@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Computer engineering</title>
+	<style>
+        body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+    background-color: #222;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 50px;
+    color: rgb(255, 255, 255);
+}
+
+#generator {
+	text-align: center;
+	margin-top: 50px;
+    color: rgb(255, 255, 255);
+}
+#generator a{
+    background-color: #ffffff;
+	color: rgb(0, 0, 0);
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	margin-top: 20px;
+    text-decoration: none;
+}
+button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	margin-top: 20px;
+}
+
+button:hover {
+	background-color: #3e8e41;
+}
+
+#title {
+	font-size: 24px;
+	margin-top: 20px;
+}
+    </style>
+</head>
+<body>
+	<h1>Capstone Title Generator</h1>
+	<div id="generator">
+		<h2>Generate Your Title:</h2>
+		<button id="generate-btn">Generate</button>
+		<p id="title"></p>
+        <a href="index.html">Home</a>
+	</div>
+
+	<script>const topics = [
+		"The Impact of Social Media on Communications",
+		"An Analysis of the Future of Video Conferencing Technology",
+		"The Importance of Effective Communication in the Workplace",
+		"A Study on the Role of Nonverbal Communication in Human Interaction",
+		"The Ethics of Communications Surveillance",
+		"Exploring the Use of Artificial Intelligence in Communication",
+		"The Role of Communication in Crisis Management",
+		"An Investigation into the Psychology of Communication",
+		"The Impact of Globalization on Communications",
+		"The Future of Mobile Communications",
+		"A Comparative Analysis of Different Communication Channels",
+		"The Role of Communication in Conflict Resolution",
+		"An Examination of the Effects of Digital Communications on Human Relationships",
+		"The Evolution of Communication Technology",
+		"The Impact of Communications Infrastructure on Economic Development",
+		"An Analysis of the Role of Language in Cross-Cultural Communications",
+		"The Use of Communication Technology in Healthcare",
+		"The Importance of Effective Communications in Project Management",
+		"The Impact of Communications Technology on the News Industry",
+		"The Role of Communication in Marketing and Advertising",
+		"An Exploration of the Cultural and Social Aspects of Communication",
+		"The Use of Social Media in Political Communications",
+		"An Analysis of the Effectiveness of Business Communications Strategies",
+		"The Role of Communication in Innovation and Creativity",
+		"The Importance of Communication in Global Business",
+	  ];
+	  
+	  function generateTitle() {
+		const randomTopic = topics[Math.floor(Math.random() * topics.length)];
+		const title = `The ${randomTopic}`;
+		document.getElementById("title").innerText = title;
+	  }
+	  
+	  document.getElementById("generate-btn").addEventListener("click", generateTitle);
+	  
+	  </script>
+</body>
+</html>
